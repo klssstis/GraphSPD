@@ -11,11 +11,11 @@ pip install torch==1.11.0+cpu torchvision==0.12.0+cpu torchaudio==0.11.0 --extra
 
 # install clang
 pip3 install clang==6.0.0.2
-sudo apt install clang -y
+sudo apt-get install clang
 sudo ln -s /usr/lib/x86_64-linux-gnu/libclang-*.so.1 /usr/lib/x86_64-linux-gnu/libclang.so
 
 # install pytorch-geometric
 pip install torch-scatter torch-sparse torch-cluster torch-spline-conv torch-geometric -f https://data.pyg.org/whl/torch-1.11.0+cpu.html
 
 # install java 8
-sudo apt-get install openjdk-8-jre
+DEBIAN_FRONTEND=noninteractive apt-get install -y openjdk-8-jre
