@@ -20,4 +20,4 @@ pip3 install torch-scatter torch-cluster torch-spline-conv -f https://data.pyg.o
 pip3 install torch-geometric==2.0.4
 
 # install java 8
-DEBIAN_FRONTEND=noninteractive apt-get install -y openjdk-8-jre
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y openjdk-8-jre
