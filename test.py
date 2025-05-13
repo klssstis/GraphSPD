@@ -120,8 +120,10 @@ def main():
     model.load_state_dict(torch.load(mdlsPath + f'/model_{_NETXARCHT_}_{dim_features}_10.pth'))
     dataset, files = GetDataset(path=testPath)
     dataloader = DataLoader(dataset, batch_size=_BATCHSIZE_, shuffle=False)
-    testAcc, testPred, testLabel = PGCNTest(model, dataloader)
-
+    try:
+        testAcc, testPred, testLabel = PGCNTest(model, dataloader)
+    except:
+        print('error tesp.py 123')
     filename = logsPath + '/test_results.txt'
     fp = open(filename, 'w')
     fp.write(f'filename,prediction\n')
